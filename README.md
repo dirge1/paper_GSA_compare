@@ -2,7 +2,10 @@
 
 Comparison of global sensitivity analysis methods for a fire spread model with a segmented characteristic
 
-Shi-Shun Chen, Xiao-Yang Li*
+
+Shi-Shun Chen, Xiao-Yang Li
+
+
 School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China
 
 # Abstract
