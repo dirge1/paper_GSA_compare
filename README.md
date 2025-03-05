@@ -14,7 +14,7 @@ School of Reliability and Systems Engineering, Beihang University, Beijing 10019
 Email: css1107@buaa.edu.cn, leexy@buaa.edu.cn
 
 
-Journal: Volume 229, March 2025, Pages 304-318
+Journal: Mathematics and Computers in Simulation 229, 304-318, 2025.
 
 Link: [https://www.sciencedirect.com/science/article/pii/S0307904X24005419](https://www.sciencedirect.com/science/article/pii/S0378475424004014)
 
