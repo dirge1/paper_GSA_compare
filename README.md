@@ -15,6 +15,8 @@ Email: css1107@buaa.edu.cn, leexy@buaa.edu.cn
 Journal: Volume 229, March 2025, Pages 304-318
 
 Link: [https://www.sciencedirect.com/science/article/pii/S0307904X24005419](https://www.sciencedirect.com/science/article/pii/S0378475424004014)
+
+
 Code: All of our source codes are publicly available at https://github.com/dirge1/GSA_segmented.
 
 # Abstract
