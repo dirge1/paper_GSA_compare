@@ -1,15 +1,16 @@
 # paper_GSA_compare
 
-Comparison of global sensitivity analysis methods for a fire spread model with a segmented characteristic
+Title: Comparison of global sensitivity analysis methods for a fire spread model with a segmented characteristic
 
 
-Shi-Shun Chen, Xiao-Yang Li
+Author: Shi-Shun Chen, Xiao-Yang Li
 
 
 School of Reliability and Systems Engineering, Beihang University, Beijing 100191, China
 
 # Abstract
 Global sensitivity analysis (GSA) can provide rich information for controlling output uncertainty. In practical applications, segmented models are commonly used to describe an abrupt model change. For segmented models, the complicated uncertainty propagation during the transition region may lead to different importance rankings of different GSA methods. If an unsuitable GSA method is applied, misleading results will be obtained, resulting in suboptimal or even wrong decisions. In this paper, four GSA indices, i.e., Sobol index, mutual information, delta index and PAWN index, are applied for a segmented fire spread model (Dry Eucalypt). The results show that four GSA indices give different importance rankings during the transition region since segmented characteristics affect different GSA indices in different ways. We suggest that analysts should rely on the results of different GSA indices according to their practical purpose, especially when making decisions for segmented models during the transition region. All of our source codes are publicly available at https://github.com/dirge1/GSA_segmented.
+
 Keywords: Global sensitivity analysis; Piecewise model; Variance-based method; Moment-independent method; Decision making
 # Introduction
 Computational models are always adopted to describe real systems. However, due to data sparsity, environmental noise or lack of knowledge, uncertainties are always involved in model inputs, resulting in uncertain model outputs [1]. At this point, global sensitivity analysis (GSA) is a powerful tool to assess the impact of the uncertainty in each input variable on the uncertainty of model output [2]. With the help of GSA, analysts can find out effective ways of model calibration, uncertainty reduction and risk control [3-5]. As a result, GSA has received extensive attention in practical applications, such as pandemic progression [6], environmental dynamics [7], and engineering design [8, 9].
