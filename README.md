@@ -19,6 +19,15 @@ Link: [https://www.sciencedirect.com/science/article/pii/S0307904X24005419](http
 
 Code: All of our source codes are publicly available at https://github.com/dirge1/GSA_segmented.
 
+# Highlights
+The effect of segmented characteristics on GSA is explored by a fire spread model.
+
+Four GSA methods give different importance rankings during the transition region.
+
+The Sobol index yields a radical importance ranking.
+
+Analysts should choose GSA methods carefully according to their practical purpose.
+
 # Abstract
 Global sensitivity analysis (GSA) can provide rich information for controlling output uncertainty. In practical applications, segmented models are commonly used to describe an abrupt model change. For segmented models, the complicated uncertainty propagation during the transition region may lead to different importance rankings of different GSA methods. If an unsuitable GSA method is applied, misleading results will be obtained, resulting in suboptimal or even wrong decisions. In this paper, four GSA indices, i.e., Sobol index, mutual information, delta index and PAWN index, are applied for a segmented fire spread model (Dry Eucalypt). The results show that four GSA indices give different importance rankings during the transition region since segmented characteristics affect different GSA indices in different ways. We suggest that analysts should rely on the results of different GSA indices according to their practical purpose, especially when making decisions for segmented models during the transition region.
 
