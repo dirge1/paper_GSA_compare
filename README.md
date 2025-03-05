@@ -277,7 +277,7 @@ Although this work carries out a detailed analysis for the segmented fire spread
 # Acknowledgements
 This work was supported by the National Natural Science Foundation of China [grant number 51775020], the Science Challenge Project [grant number. TZ2018007], the National Natural Science Foundation of China [grant numbers 62073009].
 # Appendix
-	Numerical implementations for GSA methods
+## Numerical implementations for GSA methods
 The implementation methods of these four GSA indices are summarized in Table 6 and expatiated in the following.
 Sobol index: Since computing variance using analytical integrals is always challenging, Monte Carlo integration is applied to get a numerical solution [50]. Following that, "S" _"i"  and "S" _"i" ^"T"  can be rewritten as
 	 	(18)
@@ -308,19 +308,15 @@ Python: SALib [55]
 PAWN index	Generic sampling [53]
 Matlab: SAFE [56]
 
-	Convergence validation and computation costs
+## Convergence validation and computation costs
 In this section, we validate the estimation convergence in Table 3 through a specific case that μU=4.7km/hr. Convergence analysis is conducted by examining the stability of the importance rankings with increasing sample size. For each sample size, we conduct 100 replications of the estimation and take the mean value. The results are illustrated in Fig. 7. It can be seen that the importance rankings are stable with increasing sample size, which demonstrates that the estimation of GSA indices using the sample size chosen in this paper are convergent.
    
-(a)                                                                           (b)
-  
-(c)                                                                           (d)
+
 Fig. 7  Importance rankings of different GSA methods under different sample size when μU=4.7km/hr: (a) Sobol index (b) Mutual information (c) Delta index (d) PAWN index. The results indicate that the estimations obtained using the sample size chosen in this paper are convergent.
 
 Besides, the computation time of each index under different sample sizes is shown in Fig. 8. It can be viewed that under the same sample size, calculating the delta index is the most time-consuming, followed by mutual information and PAWN index, while computing the Sobol index requires the least computational resources.
   
-(a)                                                                             (b)
-  
-(c)                                                                           (d)
+
 Fig. 8  Computation time of different GSA methods under different sample size: (a) Sobol index (b) Mutual information (c) Delta index (d) PAWN index.
 # References
 [1]Shang X., Su L., Fang H., et al. An efficient multi-fidelity Kriging surrogate model-based method for global sensitivity analysis. Reliability Engineering & System Safety. 2023, 229: 108858.
