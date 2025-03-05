@@ -203,28 +203,58 @@ In Section 3, we analyzed the importance rankings of different GSA methods for t
 ## Comparison of variance-based and moment-independent methods
 As mentioned in the introduction, most of the existing studies only use the variance-based method for conducting sensitivity analysis on segmented models. However, as can be seen from Table 3, there is a situation where none of the moment-independent methods obtain the same importance rankings as the variance-based method in the transition region of the segmented model. Moreover, if we denote the symbols  ∼ ,  >  and  ≫  as differences in sensitivity between 0% and 10%, between 10% and 50%, and larger than 50%, respectively [37], then the Sobol index supports that U≫RH, which is quite different from the importance rankings obtained by the moment-independent methods (the mutual information and the PAWN index support that RH>U, and the delta index supports that U>RH).
 Such a result arises because the output PDF has a heavily-tailed characteristic, while variance only focuses on the second-order moment of the output and is very susceptible to the heavily-tailed characteristic. As seen in Fig. 5, fixing U can eliminate the heavily-tailed characteristic and greatly reduce the output variance. What’s more, since the Sobol index is a normalized index, it will support that fixing U controls nearly all of the output uncertainty. Whereas, for the moment-independent methods, since they focus on the whole distribution and are finitely influenced by the heavily-tailed characteristic, they will not get radical results. Therefore, if the variance-based method is adopted without considering the actual requirements, a misleading importance ranking may be obtained, leading to suboptimal or even wrong decision making.
-Comparison of mutual information and delta index
+## Comparison of mutual information and delta index
 Mutual information and delta index are both GSA indices based on the output PDF. However, as can be seen from Table 3, these two methods obtain different importance rankings for the segmented fire spread model. Specifically, mutual information supports RH to be more important than U, while the delta index supports that U is the most influential variable. The same situation occurs in [26] where these two GSA indices give different importance rankings. In essence, the reason for the different rankings lies in the different focus of the two indices. Mutual information quantifies the difference in Shannon entropy between the original output and the conditional output. Shannon entropy is an uncertainty measure for random variables and is not related to the change in the output range. On the other hand, the delta index quantifies the area difference between the original PDF and the conditional one. It is a distance-based uncertainty importance measure that cannot quantify the uncertainty of random variables. Meanwhile, it is highly influenced by the variation of the output range.
 As for the segmented fire spread model, the output range of the two stages has considerable differences. Since the model stage is determined by the value of the indicator U, different U can greatly affect the output range, as illustrated in Fig. 5. When analyzing the contribution of the uncertainty of U, the mutual information compares the output entropy without considering the change in the output range, so it supports that U is less important than RH. In contrast, the definition of the delta index makes it subject to the change in the output range, so it supports that U is the most influential variable. Therefore, these two GSA methods get different importance rankings.
-How to choose an appropriate GSA method for the segmented model
+## How to choose an appropriate GSA method for the segmented model
 Through the results and analysis in Section 3, segmented characteristics indeed lead to different importance rankings for different GSA metrics indices. Then, an intuitive and essential question is which GSA index should be chosen as the basis for decision making. As argued in [37], the choice of a GSA method should be tied to the analyst’s anticipated audience or specific requirements. For example, if analysts are concerned with the change in the output distribution, then the moment-independent approaches are preferred. On the other hand, if the desired report includes some measure of central tendency, the variance-based method may be more appropriate [37].
+
+
 In terms of the segmented fire spread model during the transition region, the impact of the segmented characteristic on the GSA indices stems from the following points:
-	The output uncertainty varies at different stages. Then, due to the uncertainty in the indicator U, the overall output is jointly determined by both stages, and the combination of the output of the two stages leads to heavily-tailed characteristics in the overall output PDF.
-	The importance of different variables varies at different stages. Therefore, the heavily-tailed characteristic of the output PDF may be more significant after fixing certain variables (e.g., fixing RH).
-	Fixing the indicator U will eliminate the heavily-tailed characteristic of the output PDF and significantly affect the output range.
+
+
+The output uncertainty varies at different stages. Then, due to the uncertainty in the indicator U, the overall output is jointly determined by both stages, and the combination of the output of the two stages leads to heavily-tailed characteristics in the overall output PDF.
+
+
+The importance of different variables varies at different stages. Therefore, the heavily-tailed characteristic of the output PDF may be more significant after fixing certain variables (e.g., fixing RH).
+
+
+Fixing the indicator U will eliminate the heavily-tailed characteristic of the output PDF and significantly affect the output range.
+
+
 Due to the above particularities of the segmented model, different GSA indices have different features when applied to the segmented model, which are summarized as follows:
-	For the Sobol index, as discussed in Section 4.1, a radical importance ranking is obtained, and fixing the indicator U controls nearly all of the output uncertainty. At this point, variance-based methods may not be recommended as the basis for decision making.
-	For the mutual information, it evaluates the variation in the aggregation level of output without being affected by the undesirable characteristics arising from segmented characteristics. If analysts are concerned about the variation of the aggregation level of output PDF, mutual information should be preferred.
-	For the delta index, as discussed in Section 4.2, the variation of the output range is concerned, and the contribution of the indicator U enlarges. If the variation of the output range is of concern for analysts, the delta index should be preferred.
-	For the PAWN index chosen in this paper, it obtains a robust importance ranking result, and the influence of the undesirable characteristics arising from segmented characteristics is relatively small. If analysts are concerned about the variation of output CDF, the PAWN index should be preferred.
+
+
+For the Sobol index, as discussed in Section 4.1, a radical importance ranking is obtained, and fixing the indicator U controls nearly all of the output uncertainty. At this point, variance-based methods may not be recommended as the basis for decision making.
+
+
+For the mutual information, it evaluates the variation in the aggregation level of output without being affected by the undesirable characteristics arising from segmented characteristics. If analysts are concerned about the variation of the aggregation level of output PDF, mutual information should be preferred.
+
+
+For the delta index, as discussed in Section 4.2, the variation of the output range is concerned, and the contribution of the indicator U enlarges. If the variation of the output range is of concern for analysts, the delta index should be preferred.
+
+
+For the PAWN index chosen in this paper, it obtains a robust importance ranking result, and the influence of the undesirable characteristics arising from segmented characteristics is relatively small. If analysts are concerned about the variation of output CDF, the PAWN index should be preferred.
+
+
 Although the above findings do not uniquely identify the appropriate GSA approach under all circumstances, they do narrow the field and provide reasonable justification for the final choice of method. In addition, the above analysis can enhance our understanding of different GSA methods and provide guidance in choosing appropriate GSA methods for other segmented models.
 # Conclusion
 In this paper, we focus on the implementation of GSA on a special class of mathematical models, i.e. segmented models. Sobol index, mutual information, delta index and PAWN index are used to carry out GSA for a segmented fire spread model called Dry Eucalypt model in the transition region. Some conclusions could be drawn as follows:
-	We demonstrate that the inconsistent GSA results stem from the segmented characteristic. During the transition region, these four GSA methods get different importance rankings. In contrast, when not in the transition region, these four GSA methods yield the same GSA results regardless of the value of μU.
-	The variance-based approach may not be suitable for dealing with the segmented model during the transition region, as it will yield a radical importance ranking result, i.e., fixing the indicator controls nearly all of the output uncertainty.
-	For moment-independent methods, the mutual information is concerned with the aggregation level of the output PDF, the delta index takes into account the variation of the output range, and the PAWN index is concerned with the variation of output CDF. All these GSA indices can be used as the basis for decision making when dealing with segmented models, depending on the specific requirements of analysts.
-	For the Dry Eucalypt model, during its transition region, U is always an influential variable and T always plays a minor role; when close to the Stage 1, RH has significant impact and FA has little impact; when close to the Stage 2, FA is more influential than RH.
+
+
+We demonstrate that the inconsistent GSA results stem from the segmented characteristic. During the transition region, these four GSA methods get different importance rankings. In contrast, when not in the transition region, these four GSA methods yield the same GSA results regardless of the value of μU.
+
+
+The variance-based approach may not be suitable for dealing with the segmented model during the transition region, as it will yield a radical importance ranking result, i.e., fixing the indicator controls nearly all of the output uncertainty.
+
+
+For moment-independent methods, the mutual information is concerned with the aggregation level of the output PDF, the delta index takes into account the variation of the output range, and the PAWN index is concerned with the variation of output CDF. All these GSA indices can be used as the basis for decision making when dealing with segmented models, depending on the specific requirements of analysts.
+
+
+For the Dry Eucalypt model, during its transition region, U is always an influential variable and T always plays a minor role; when close to the Stage 1, RH has significant impact and FA has little impact; when close to the Stage 2, FA is more influential than RH.
 The work in this paper clarifies the necessity for applying appropriate indices when performing GSA on a segmented fire spread model, especially during the transition region. Analysts should value the uniqueness of the segmented model and consider the results of different GSA indices according to their practical purpose, so as to provide credible information for decision making. All of our source codes are publicly available at https://github.com/dirge1/GSA_segmented.
+
+
 Although this work carries out a detailed analysis for the segmented fire spread model, the generalization of the findings needs to be verified on a more extensive set of segmented models. In the supplementary material, the GSA results of another segmented model during the transition region are compared to illustrate the generalizability of the findings in this paper. Furthermore, we will work on providing a mathematical basis for the impact of segmented characteristics on different GSA approaches in future research, not limited to case studies.
 # Acknowledgements
 This work was supported by the National Natural Science Foundation of China [grant number 51775020], the Science Challenge Project [grant number. TZ2018007], the National Natural Science Foundation of China [grant numbers 62073009].
